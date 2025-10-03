@@ -13,6 +13,7 @@ let getidservice= (id)=>{
     return 404
 }
 let postservice = (obj)=>{
+    obj.id = data.length +1
     data.push(obj)
     return obj
 }

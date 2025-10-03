@@ -1,11 +1,7 @@
 const path = require("path")
 const service = require("../service/productservice.js")
 const getcontrol = (req,res)=>{
-    let result = service.getservice()
-    res.status(200).json({
-        message : "List Of All Products",
-        data : result
-    })
+    res.status(200).sendFile(path.join(__dirname,"../view","productget.html"))
 }
 const getidcontrol = (req,res)=>{
     let result = service.getidservice(req.params.id)
